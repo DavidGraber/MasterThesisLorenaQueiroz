@@ -1,0 +1,93 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "Welcome. This page will introduce the themes, interests, and work collected in this website."
+  },
+  {
+    "objectID": "index.html#about-this-site",
+    "href": "index.html#about-this-site",
+    "title": "Introduction",
+    "section": "About this site",
+    "text": "About this site\nAdd an overview of your background, current focus, and the purpose of this portfolio here."
+  },
+  {
+    "objectID": "index.html#explore",
+    "href": "index.html#explore",
+    "title": "Introduction",
+    "section": "Explore",
+    "text": "Explore\nUse the navigation above to visit the two track modules and the master thesis page."
+  },
+  {
+    "objectID": "module-2.html",
+    "href": "module-2.html",
+    "title": "Track Module 2",
+    "section": "",
+    "text": "Use this page for the content of Track Module 2."
+  },
+  {
+    "objectID": "module-2.html#overview",
+    "href": "module-2.html#overview",
+    "title": "Track Module 2",
+    "section": "Overview",
+    "text": "Overview\nAdd the module overview here."
+  },
+  {
+    "objectID": "module-2.html#topics-and-work",
+    "href": "module-2.html#topics-and-work",
+    "title": "Track Module 2",
+    "section": "Topics and work",
+    "text": "Topics and work\nAdd notes, links, assignments, and other material here."
+  },
+  {
+    "objectID": "thesis.html",
+    "href": "thesis.html",
+    "title": "Master Thesis",
+    "section": "",
+    "text": "Use this page to present your master thesis."
+  },
+  {
+    "objectID": "thesis.html#abstract",
+    "href": "thesis.html#abstract",
+    "title": "Master Thesis",
+    "section": "Abstract",
+    "text": "Abstract\nAdd the thesis abstract here."
+  },
+  {
+    "objectID": "thesis.html#research-question",
+    "href": "thesis.html#research-question",
+    "title": "Master Thesis",
+    "section": "Research question",
+    "text": "Research question\nAdd the central research question and context here."
+  },
+  {
+    "objectID": "thesis.html#results-and-materials",
+    "href": "thesis.html#results-and-materials",
+    "title": "Master Thesis",
+    "section": "Results and materials",
+    "text": "Results and materials\nAdd findings, figures, references, and links to supporting materials here."
+  },
+  {
+    "objectID": "module-1.html",
+    "href": "module-1.html",
+    "title": "Track Module 1",
+    "section": "",
+    "text": "Use this page for the content of Track Module 1."
+  },
+  {
+    "objectID": "module-1.html#overview",
+    "href": "module-1.html#overview",
+    "title": "Track Module 1",
+    "section": "Overview",
+    "text": "Overview\nAdd the module overview here."
+  },
+  {
+    "objectID": "module-1.html#topics-and-work",
+    "href": "module-1.html#topics-and-work",
+    "title": "Track Module 1",
+    "section": "Topics and work",
+    "text": "Topics and work\nAdd notes, links, assignments, and other material here."
+  }
+]
