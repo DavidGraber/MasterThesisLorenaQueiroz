@@ -1,0 +1,46 @@
+/* Keep the reading surface calm while giving the site its own identity. */
+:root {
+  --site-ink: #17324d;
+  --site-accent: #c76b39;
+  --site-paper: #f7f4ee;
+}
+
+body {
+  background: var(--site-paper);
+  color: #263238;
+}
+
+.navbar {
+  box-shadow: 0 2px 12px rgba(23, 50, 77, 0.14);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.navbar-nav .nav-link {
+  border-bottom: 2px solid transparent;
+  transition: border-color 160ms ease, color 160ms ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  border-bottom-color: var(--site-accent);
+}
+
+#quarto-content {
+  padding-top: 2rem;
+}
+
+h1, h2, h3 {
+  color: var(--site-ink);
+}
+
+h1 {
+  font-weight: 700;
+}
+
+a {
+  color: #9b4d25;
+}

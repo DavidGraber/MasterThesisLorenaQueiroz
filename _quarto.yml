@@ -1,0 +1,28 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Master Thesis Lorena Queiroz"
+  description: "Academic portfolio and research notes"
+  navbar:
+    background: "#17324d"
+    foreground: "#ffffff"
+    left:
+      - text: "Introduction"
+        href: index.qmd
+      - text: "Track Module 1"
+        href: module-1.qmd
+      - text: "Track Module 2"
+        href: module-2.qmd
+      - text: "Master Thesis"
+        href: thesis.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    toc-location: right
+    smooth-scroll: true
+    html-math-method: katex
