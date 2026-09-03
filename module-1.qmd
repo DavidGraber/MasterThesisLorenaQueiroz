@@ -1,14 +1,5 @@
 ---
 title: "Track Module 1"
-description: "Notes and materials for Track Module 1."
 ---
 
-Use this page for the content of Track Module 1.
-
-## Overview
-
-Add the module overview here.
-
-## Topics and work
-
-Add notes, links, assignments, and other material here.
+Content of Track Module 1.

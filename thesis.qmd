@@ -1,18 +1,5 @@
 ---
 title: "Master Thesis"
-description: "Research, methods, and outcomes from the master thesis."
 ---
 
-Use this page to present your master thesis.
-
-## Abstract
-
-Add the thesis abstract here.
-
-## Research question
-
-Add the central research question and context here.
-
-## Results and materials
-
-Add findings, figures, references, and links to supporting materials here.
+Instructions for the main thesis project.
