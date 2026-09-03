@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="A starting point for this academic journey.">
 
-<title>Introduction – Master Thesis Lorena Queiroz</title>
+<title>The Next Generation of Machine Learning Models For Binding Affinity Prediction – Master Thesis Lorena Queiroz</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -124,8 +123,25 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#about-this-site" id="toc-about-this-site" class="nav-link active" data-scroll-target="#about-this-site">About this site</a></li>
-  <li><a href="#explore" id="toc-explore" class="nav-link" data-scroll-target="#explore">Explore</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
+  <ul class="collapse">
+  <li><a href="#small-molecule-drugs" id="toc-small-molecule-drugs" class="nav-link" data-scroll-target="#small-molecule-drugs">Small Molecule Drugs</a></li>
+  <li><a href="#d-structures" id="toc-d-structures" class="nav-link" data-scroll-target="#d-structures">3D Structures</a></li>
+  <li><a href="#visualizing-proteins-ligands-and-their-interactions" id="toc-visualizing-proteins-ligands-and-their-interactions" class="nav-link" data-scroll-target="#visualizing-proteins-ligands-and-their-interactions">Visualizing Proteins, Ligands, and Their Interactions</a></li>
+  <li><a href="#protein-ligand-interactions" id="toc-protein-ligand-interactions" class="nav-link" data-scroll-target="#protein-ligand-interactions">Protein-Ligand Interactions</a></li>
+  <li><a href="#computational-drug-discovery-and-virtual-screening" id="toc-computational-drug-discovery-and-virtual-screening" class="nav-link" data-scroll-target="#computational-drug-discovery-and-virtual-screening">Computational Drug Discovery and Virtual Screening</a></li>
+  <li><a href="#classical-and-machine-learning-scoring-functions" id="toc-classical-and-machine-learning-scoring-functions" class="nav-link" data-scroll-target="#classical-and-machine-learning-scoring-functions">Classical and Machine Learning Scoring Functions</a></li>
+  <li><a href="#summary-of-the-classical-computational-drug-screening-workflow" id="toc-summary-of-the-classical-computational-drug-screening-workflow" class="nav-link" data-scroll-target="#summary-of-the-classical-computational-drug-screening-workflow"><strong>Summary of the Classical Computational Drug Screening Workflow</strong></a></li>
+  <li><a href="#dynamics" id="toc-dynamics" class="nav-link" data-scroll-target="#dynamics">Dynamics</a></li>
+  <li><a href="#simulating-the-dynamics" id="toc-simulating-the-dynamics" class="nav-link" data-scroll-target="#simulating-the-dynamics">Simulating the dynamics</a></li>
+  <li><a href="#how-should-we-design-future-scoring-functions-some-ideas" id="toc-how-should-we-design-future-scoring-functions-some-ideas" class="nav-link" data-scroll-target="#how-should-we-design-future-scoring-functions-some-ideas">How should we design future scoring functions? Some ideas:</a>
+  <ul class="collapse">
+  <li><a href="#trajectory-based-binding-energy-prediction" id="toc-trajectory-based-binding-energy-prediction" class="nav-link" data-scroll-target="#trajectory-based-binding-energy-prediction">Trajectory-based Binding Energy Prediction</a></li>
+  <li><a href="#reliability-and-explainability" id="toc-reliability-and-explainability" class="nav-link" data-scroll-target="#reliability-and-explainability">Reliability and Explainability</a></li>
+  <li><a href="#including-water-molecules-in-the-binding-pocket" id="toc-including-water-molecules-in-the-binding-pocket" class="nav-link" data-scroll-target="#including-water-molecules-in-the-binding-pocket">Including Water Molecules in the Binding Pocket</a></li>
+  <li><a href="#hybrid-classical-and-machine-learning-scoring-functions" id="toc-hybrid-classical-and-machine-learning-scoring-functions" class="nav-link" data-scroll-target="#hybrid-classical-and-machine-learning-scoring-functions">Hybrid Classical and Machine Learning Scoring Functions</a></li>
+  </ul></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -134,14 +150,9 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Introduction</h1>
+<h1 class="title">The Next Generation of Machine Learning Models For Binding Affinity Prediction</h1>
 </div>
 
-<div>
-  <div class="description">
-    A starting point for this academic journey.
-  </div>
-</div>
 
 
 <div class="quarto-title-meta">
@@ -156,16 +167,100 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Welcome. This page will introduce the themes, interests, and work collected in this website.</p>
-<section id="about-this-site" class="level2">
-<h2 class="anchored" data-anchor-id="about-this-site">About this site</h2>
-<p>Add an overview of your background, current focus, and the purpose of this portfolio here.</p>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<section id="small-molecule-drugs" class="level3">
+<h3 class="anchored" data-anchor-id="small-molecule-drugs">Small Molecule Drugs</h3>
+<p>The vast majority of approved therapeutics are small molecules designed to bind to specific target proteins. Proteins are macromolecules composed of folded amino acid chains, possessing 3D folds that dictate their biological function. Small molecules, or ligands, are low-molecular-weight organic compounds (natural or designed) that bind into designated binding pockets on these proteins. By binding to these sites, ligands can modulate, inhibit, or enhance the protein’s activity to achieve a therapeutic effect.</p>
 </section>
-<section id="explore" class="level2">
-<h2 class="anchored" data-anchor-id="explore">Explore</h2>
-<p>Use the navigation above to visit the two track modules and the master thesis page.</p>
+<section id="d-structures" class="level3">
+<h3 class="anchored" data-anchor-id="d-structures">3D Structures</h3>
+<p>To design small-molecule drugs binding to specific target proteins, researchers rely on accurate 3D structural data. The gold standard for obtaining these structures is X-ray crystallography, which captures proteins (and the interacting small molecules) in their true 3D state as found in the physiological environment. Resulting structures are publicly deposited in the Protein Data Bank (PDB, Example: https://www.rcsb.org/structure/1OXR).</p>
+</section>
+<section id="visualizing-proteins-ligands-and-their-interactions" class="level3">
+<h3 class="anchored" data-anchor-id="visualizing-proteins-ligands-and-their-interactions">Visualizing Proteins, Ligands, and Their Interactions</h3>
+<p>Proteins and ligands can be visualized in 3D using molecular visualization software (e.g.&nbsp;PyMOL). These tools allow researchers to explore the protein’s surface, identify binding pockets, and observe how ligands interact with the protein at an atomic level. There are different ways to visualize these interactions, such as showing the protein in a cartoon representation, with all atoms shown in a stick representation or with an approximated surface. Atoms are generally colored by element (e.g.&nbsp;carbon in green, cyan or magenta, oxygen in red, nitrogen in blue, sulfur in yellow, and hydrogen in white).</p>
+<ul>
+<li><p>Cartoon representation: Shows the protein’s secondary structure (alpha helices, beta sheets, loops), which are common ways the amino acid chains fold within a protein. This representation highlights the protein’s overall fold, providing a clear view of the protein’s architecture.</p></li>
+<li><p>Stick representation: Displays all atoms and bonds in the protein and ligand as sticks (hydrogens are usually not shown), allowing for a detailed view of the atomic bonds between the protein and ligand.</p></li>
+<li><p>Surface representation: Displays the protein’s surface as a solid shape, which can be colored by properties such as electrostatic potential or hydrophobicity. This representation helps to visualize the shape and accessibility of the binding pocket, as well as how the ligand fits into it.</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/protein_representations.png" class="img-fluid figure-img"></p>
+<figcaption>Three representations of the same protein-ligand interaction: The small molecule drug Aspirin (in cyan) binding and blocking the activity of Cyclooxygenase, which would otherwise produce prostaglandins that cause inflammation, pain, and fever.</figcaption>
+</figure>
+</div>
+</section>
+<section id="protein-ligand-interactions" class="level3">
+<h3 class="anchored" data-anchor-id="protein-ligand-interactions">Protein-Ligand Interactions</h3>
+<p>The efficacy of a drug is heavily dependent on its binding affinity: The strength of the interaction between the ligand and the protein. High affinity ensures the ligand remains bound to its target even at low concentrations, which minimizes required dosages and reduces off-target side effects. This affinity is driven by a complex interplay of physical non-covalent interactions. These include hydrogen bonding, electrostatic forces, van der Waals interactions, and hydrophobic effects that displace ordered water molecules from the binding pocket.</p>
+</section>
+<section id="computational-drug-discovery-and-virtual-screening" class="level3">
+<h3 class="anchored" data-anchor-id="computational-drug-discovery-and-virtual-screening">Computational Drug Discovery and Virtual Screening</h3>
+<p>The primary goal of computational drug discovery / virtual screening in the small molecule domain is to rapidly and cost-effectively identify promising small molecules from libraries containing millions of candidates. Structure-based drug discovery explicitly leverages the known 3D geometry of the target protein. To evaluate a drug candidate, a computational docking tool is used to dock the ligand into the target pocket, aiming to find a favourable binding pose. Docking algorithms explore the conformational space of the ligand and the protein pocket, generating multiple possible binding poses.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/docking.gif" class="img-fluid figure-img"></p>
+<figcaption>A docking algorithm explores docking poses (conformations in which a ligand can bind to a given protein). The resulting 3D poses can then be scores by a scoring function.</figcaption>
+</figure>
+</div>
+<p>Not all of the binding poses that are generated for a ligand are realistic or even physically possible. For this reason, once these 3D protein-ligand complexes are generated, they are evaluated using a scoring function, a computational method that produces scores that reflect a binding energy (low energy is better, meaning the binding is more stable). These scoring functions should separate true binders from non-binders, and ideally rank the true binders poses by their binding affinity. The top ranked candidates can then be selected for experimental validation, which is the ultimate test of a drug candidate’s efficacy.</p>
+</section>
+<section id="classical-and-machine-learning-scoring-functions" class="level3">
+<h3 class="anchored" data-anchor-id="classical-and-machine-learning-scoring-functions">Classical and Machine Learning Scoring Functions</h3>
+<p>Historically, virtual screening has relied on classical scoring functions. These empirical, knowledge-based, or force-field methods (such as AutoDock Vina) use predefined physics-based calculations to estimate a binding energy for a given protein-ligand binding pose. In recent years, Machine Learning (ML) scoring functions have been developed for binding pose scoring, which are trained on existing protein-ligand complexes with known binding energies (like the crystal structures in the PDB). These ML scoring functions can be broadly categorized into two types:</p>
+<ul>
+<li><p><strong>Classical Machine Learning Methods:</strong> Models such as Random Forests and XGBoost use engineered physics-based descriptors and non-covalent interaction counts to predict affinity.</p></li>
+<li><p><strong>Deep Learning Methods:</strong> Use neural networks that have been trained on existing data (protein-ligand poses with binding energy labels) and have learned to assign binding energies to 3D protein-ligand binding poses.</p></li>
+</ul>
+</section>
+<section id="summary-of-the-classical-computational-drug-screening-workflow" class="level3">
+<h3 class="anchored" data-anchor-id="summary-of-the-classical-computational-drug-screening-workflow"><strong>Summary of the Classical Computational Drug Screening Workflow</strong></h3>
+<ol type="1">
+<li>Obtain the 3D structure of the target protein (from the PDB).</li>
+<li>Use a docking tool to generate multiple binding poses for each ligand.</li>
+<li>Score the generated poses using a scoring function (classical or ML-based).</li>
+<li>Select the top-ranked candidates for experimental validation.</li>
+</ol>
+</section>
+<section id="dynamics" class="level3">
+<h3 class="anchored" data-anchor-id="dynamics">Dynamics</h3>
+<p>In the above workflow, the protein and ligand are treated as static, and the scoring function predicts the binding energy based on a single pose. However, in reality, both the protein and ligand are dynamic molecules that move constantly.</p>
+<p>While the static crystal structures in the PDB provide valuable atomic resolution binding information, molecular systems in physiological environments are highly dynamic. The positioning in the crystal structure represents an energy minimum state. In physiological conditions, proteins and ligands are constantly moving, fluctuating around this energy minimum, and the binding pocket can adopt multiple conformations.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><video src="images/movie.mp4" class="img-fluid" controls=""><a href="images/movie.mp4">Video</a></video></p>
+<figcaption>Simulation of the flexibility of a protein-ligand complex: The protein carbon atoms are shown in green, the ligand’s carbon atoms are shown in yellow. Oxygen atoms are shown in red, nitrogen atoms in blue and hydrogens in white</figcaption>
+</figure>
+</div>
+</section>
+<section id="simulating-the-dynamics" class="level3">
+<h3 class="anchored" data-anchor-id="simulating-the-dynamics">Simulating the dynamics</h3>
+<p>Given an input structure of a protein-ligand complex, Molecular Dynamics (MD) simulations can be used to simulate the dynamics of the system. MD simulations use classical physics to model the forces acting on each atom in the system and integrate these forces over time to generate a trajectory of atomic positions. This trajectory captures the dynamic behavior of the protein-ligand complex, allowing researchers to observe how the binding pocket and ligand conformations change over time.</p>
+</section>
+<section id="how-should-we-design-future-scoring-functions-some-ideas" class="level2">
+<h2 class="anchored" data-anchor-id="how-should-we-design-future-scoring-functions-some-ideas">How should we design future scoring functions? Some ideas:</h2>
+<p>(You can read this once you have familiarized yourself with ML scoring functions, their problems and drawbacks)</p>
+<section id="trajectory-based-binding-energy-prediction" class="level3">
+<h3 class="anchored" data-anchor-id="trajectory-based-binding-energy-prediction">Trajectory-based Binding Energy Prediction</h3>
+<p>The dynamic nature of protein-ligand interactions suggests that a single static pose may not fully capture the dynamic nature of the protein-ligand interaction, suggesting that binding energy predictions based on a single pose may be inaccurate. Instead, analyzing the entire trajectory of the protein-ligand complex could potentially provide a more accurate binding energy prediction.</p>
+</section>
+<section id="reliability-and-explainability" class="level3">
+<h3 class="anchored" data-anchor-id="reliability-and-explainability">Reliability and Explainability</h3>
+<p>Produce a scoring function that is not a black box, but provides the user with an explanation of why it scores a given pose highly. It could for example provide a 3D visualization of the protein-ligand complex with the predicted non-covalent interactions highlighted, and a breakdown of the predicted binding energy into its contributing components (e.g.&nbsp;hydrogen bonding, electrostatics, van der Waals, hydrophobic effects, etc.). This would allow researchers to understand the underlying reasons for the predicted binding affinity and make informed decisions about which candidates to pursue further. For this one would need to train a model to correctly predict non-covalent interactions (e.g.&nbsp;hydrogen bonds, salt bridges, hydrophobic contacts) in addition to the binding energy.</p>
+</section>
+<section id="including-water-molecules-in-the-binding-pocket" class="level3">
+<h3 class="anchored" data-anchor-id="including-water-molecules-in-the-binding-pocket">Including Water Molecules in the Binding Pocket</h3>
+<p>Besides the protein atoms and the ligand atoms, water molecules in the binding pocket can also play a significant role in the binding affinity. Water molecules can mediate interactions between the protein and ligand, and their displacement upon ligand binding can contribute to the overall binding free energy. Therefore, including water molecules in the scoring function could improve the accuracy of binding affinity predictions.</p>
+</section>
+<section id="hybrid-classical-and-machine-learning-scoring-functions" class="level3">
+<h3 class="anchored" data-anchor-id="hybrid-classical-and-machine-learning-scoring-functions">Hybrid Classical and Machine Learning Scoring Functions</h3>
+<p>A hybrid approach that combines classical scoring functions with machine learning models could leverage the strengths of both methods. Classical scoring functions can provide a physics-based foundation, while machine learning models can capture complex patterns and relationships in the data that may not be easily captured by classical methods. This hybrid approach could potentially lead to more accurate and robust binding affinity predictions.</p>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -242,7 +337,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/DavidGraber\.github\.io\/MasterThesisLorenaQueiroz\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
