@@ -1,0 +1,26 @@
+::: {.callout-important title="Self-check" collapse="true"}
+Why is the 3D structure of a protein important for drug design? Think about why it is important to know the 3D structure of a protein when designing drugs that target it. Why do models that predict the binding affinity of a small molecule to a protein usually rely on the 3D structure of the protein-ligand interaction? What speaks against using the protein sequence and the small molecule string representation (e.g., SMILES) as input for such models?
+:::
+
+::: {.callout-note title="Task:" collapse="true"}
+Proteins fold into structures that determine their function.
+:::
+
+::: {.callout-tip title="Self-Study:" collapse="true"}
+What might be lost when using only a protein sequence and a SMILES string?
+:::
+
+::: {.callout-warning title="Self-check:" collapse="true"}
+A predicted structure is not necessarily experimentally verified.
+:::
+
+::: {.callout-note title="Self-check:" collapse="true"}
+What are the main non-covalent forces involved in protein-ligand binding?
+:::
+
+
+::: {.highlight}
+**Self-check**
+
+Why might sequence and SMILES representations be insufficient for predicting binding affinity?
+:::
