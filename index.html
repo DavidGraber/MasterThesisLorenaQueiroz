@@ -182,7 +182,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Proteins and ligands can be visualized in 3D using molecular visualization software (e.g.&nbsp;PyMOL). These tools allow researchers to explore the protein’s surface, identify binding pockets, and observe how ligands interact with the protein at an atomic level. There are different ways to visualize these interactions, such as showing the protein in a cartoon representation, with all atoms shown in a stick representation or with an approximated surface. Atoms are generally colored by element (e.g.&nbsp;carbon in green, cyan or magenta, oxygen in red, nitrogen in blue, sulfur in yellow, and hydrogen in white).</p>
 <ul>
 <li><p>Cartoon representation: Shows the protein’s secondary structure (alpha helices, beta sheets, loops), which are common ways the amino acid chains fold within a protein. This representation highlights the protein’s overall fold, providing a clear view of the protein’s architecture.</p></li>
-<li><p>Stick representation: Displays all atoms and bonds in the protein and ligand as sticks (hydrogens are usually not shown), allowing for a detailed view of the atomic bonds between the protein and ligand.</p></li>
+<li><p>Stick representation: Displays all atoms and bonds in the protein and ligand as sticks (hydrogens are usually not shown), allowing for a detailed view of the atomic bonds (covalent).</p></li>
 <li><p>Surface representation: Displays the protein’s surface as a solid shape, which can be colored by properties such as electrostatic potential or hydrophobicity. This representation helps to visualize the shape and accessibility of the binding pocket, as well as how the ligand fits into it.</p></li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
@@ -202,7 +202,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/docking.gif" class="img-fluid figure-img"></p>
-<figcaption>A docking algorithm explores docking poses (conformations in which a ligand can bind to a given protein). The resulting 3D poses can then be scores by a scoring function.</figcaption>
+<figcaption>A docking algorithm explores docking poses (conformations in which a ligand can bind to a given protein). The resulting 3D poses can then be scored by a scoring function.</figcaption>
 </figure>
 </div>
 <p>Not all of the binding poses that are generated for a ligand are realistic or even physically possible. For this reason, once these 3D protein-ligand complexes are generated, they are evaluated using a scoring function, a computational method that produces scores that reflect a binding energy (low energy is better, meaning the binding is more stable). These scoring functions should separate true binders from non-binders, and ideally rank the true binders poses by their binding affinity. The top ranked candidates can then be selected for experimental validation, which is the ultimate test of a drug candidate’s efficacy.</p>
@@ -218,8 +218,8 @@ ul.task-list li input[type="checkbox"] {
 <section id="summary-of-the-classical-computational-drug-screening-workflow" class="level3">
 <h3 class="anchored" data-anchor-id="summary-of-the-classical-computational-drug-screening-workflow"><strong>Summary of the Classical Computational Drug Screening Workflow</strong></h3>
 <ol type="1">
-<li>Obtain the 3D structure of the target protein (from the PDB).</li>
-<li>Use a docking tool to generate multiple binding poses for each ligand.</li>
+<li>Obtain the 3D structure of the target protein (from the PDB or with folding models such as AlphaFold).</li>
+<li>Use a docking tool to generate multiple binding poses for each ligand in your library.</li>
 <li>Score the generated poses using a scoring function (classical or ML-based).</li>
 <li>Select the top-ranked candidates for experimental validation.</li>
 </ol>

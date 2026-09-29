@@ -44,3 +44,18 @@ h1 {
 a {
   color: #9b4d25;
 }
+
+.highlight {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  border-left: 5px solid var(--site-accent);
+  background: #fff3e8;
+  color: #263238;
+  border-radius: 0.35rem;
+}
+
+.highlight strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--site-ink);
+}

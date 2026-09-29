@@ -118,8 +118,20 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning Objectives:</a></li>
+  <li><a href="#part-1-proteins-small-molecules-and-their-interaction-physics" id="toc-part-1-proteins-small-molecules-and-their-interaction-physics" class="nav-link" data-scroll-target="#part-1-proteins-small-molecules-and-their-interaction-physics">Part 1: Proteins, Small Molecules and their Interaction Physics</a>
+  <ul class="collapse">
+  <li><a href="#how-to-visualise-proteins-small-molecules-and-their-interactions" id="toc-how-to-visualise-proteins-small-molecules-and-their-interactions" class="nav-link" data-scroll-target="#how-to-visualise-proteins-small-molecules-and-their-interactions">How to visualise proteins, small molecules and their interactions:</a></li>
+  <li><a href="#protein-ligand-interaction-physics" id="toc-protein-ligand-interaction-physics" class="nav-link" data-scroll-target="#protein-ligand-interaction-physics">Protein-Ligand Interaction Physics:</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary:</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -143,9 +155,195 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Content of Track Module 1.</p>
+<section id="learning-objectives" class="level1">
+<h1>Learning Objectives:</h1>
+<ol type="1">
+<li>Familiarise yourself with the basic concepts of proteins, small molecules, and their interaction physics.</li>
+<li>Learn how to visualise the 3D structures of proteins and small molecules and how such structures are obtained.</li>
+<li>Investigate how 3D structures of protein-ligand interactions are scored with scoring functions.</li>
+</ol>
+</section>
+<section id="part-1-proteins-small-molecules-and-their-interaction-physics" class="level1">
+<h1>Part 1: Proteins, Small Molecules and their Interaction Physics</h1>
+<p>To understand the principles of drug discovery, it is important to understand the basic concepts of proteins, small molecules, and their interaction physics. Proteins are large biomolecules that perform a wide range of functions in living organisms, including catalyzing biochemical reactions, providing structural support, and regulating cellular processes. Therefore, they are the main targets for drug development. Small molecules, on the other hand, are low molecular weight compounds that are small enough to penetrate cell membranes and interact with proteins to modulate their activity. Therefore, small molecules are the main type of drugs used in modern medicine.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Self-Study: Proteins">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Self-Study: Proteins
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Review how protein are built from an <strong>amino acid sequence</strong>, how they fold into primary, secondary, tertiary and quaternary structures, and how their structure determines their function.</li>
+<li>Read about how the 3D structures of proteins are determined experimentally (e.g., X-ray crystallography, NMR spectroscopy) or predicted computationally (e.g.&nbsp;2021 Breakthrough Paper <a href="https://www.nature.com/articles/s41586-021-03819-2">AlphaFold2</a>).</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Self-Study: Small Molecules">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Self-Study: Small Molecules
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Review how drug-like small molecules are built from atoms, of which atoms they are composed and what functional groups they contain. Describe what makes a good drug-like small molecule (See <a href="https://en.wikipedia.org/wiki/Lipinski%27s_rule_of_five">Lipinski’s Rule of Five</a>).</li>
+<li>Understand how small molecules can interact with proteins through various mechanisms, such as binding to active sites or allosteric sites.</li>
+<li>Read about how small molecules can be represented in text format (e.g.&nbsp;Simplified Molecular-Input Line-Entry System <a href="https://en.wikipedia.org/wiki/Simplified_molecular-input_line-entry_system">SMILES</a>).</li>
+</ol>
+</div>
+</div>
+</div>
+<section id="how-to-visualise-proteins-small-molecules-and-their-interactions" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-visualise-proteins-small-molecules-and-their-interactions">How to visualise proteins, small molecules and their interactions:</h2>
+<p>Structural bioinformaticians often use <a href="https://pymol.org/2/">PyMOL</a> to visualise the 3D structures of proteins and small molecules. PyMOL is a powerful molecular visualization tool that allows users to manipulate and analyze molecular structures in three dimensions. It can be used to visualize protein-ligand interactions, identify binding sites, and generate publication-quality images of molecular structures.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Task: Visualizing 3D Structures">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Task: Visualizing 3D Structures
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Apply for a free student license of PyMOL at <a href="https://www.pymol.org/buy.html" class="uri">https://www.pymol.org/buy.html</a></li>
+<li>Download and install PyMOL on your computer.</li>
+<li>Use PyMOL to visualise the 3D structure of a protein-ligand complex of your choice. You can obtain the 3D structure from the Protein Data Bank (PDB) by searching for a specific protein or ligand and downloading the corresponding PDB file. Once you have the PDB file, you can open it in PyMOL and explore the protein-ligand interactions.</li>
+<li>Alternatively, your can directly fetch the 3D structure of a protein-ligand complex from the PDB using the PDB ID (e.g., 1OXR) in PyMOL by running the command <code>fetch 1OXR</code> in the PyMOL command line.</li>
+<li>Familiarise yourself with the basic functions of the PyMOL interface, such as rotating, zooming, and changing the representation of the molecules.
+<ul>
+<li>At the bottom right, you can toggle on the sequence viewer (S), which shows the amino acid sequence of the protein and allows you to select specific residues by clicking on them. It also shows the ligand(s) in the structure, as well as potential water molecules and ions.</li>
+<li>You can select different parts of the protein or ligand by clicking on them in the PyMOL interface, which creates a selection (sele).</li>
+<li>On the right side of the PyMOL interface, you can find the “Display” menu, which allows you show (S) or hide (H) different representations, such as hide the cartoon representation and instead show the stick representation. You can also toggle on the display of an approximated surface.</li>
+<li>These operations can be performed across the entire structure (all), on a specific part of the structure (e.g.&nbsp;1OXR) or on the current selection (sele).</li>
+</ul></li>
+</ol>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled" title="Self-check: HIV Protease">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Self-check: HIV Protease
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Use PyMOL to visualise the 3D structure of a HIV protease-ligand complex (3O9I). Note that the protein is a homodimer, meaning it consists of two identical subunits. The ligand is a small molecule inhibitor that binds to the active site of the protease in between the two subunits. Use PyMOL to explore the protein-ligand interaction. Select the two protein chains in the sequence viewer and toggle on the surface view to see how the ligand fits into the active site.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="protein-ligand-interaction-physics" class="level2">
+<h2 class="anchored" data-anchor-id="protein-ligand-interaction-physics">Protein-Ligand Interaction Physics:</h2>
+<p>Small molecule drugs generally work by binding to a specific protein target and modulating its activity. This binding is mediated by a combination of <strong>non-covalent</strong> interactions, meaning there are no covalent bonds formed between the protein and the small molecule. The interactions include:</p>
+<ul>
+<li>hydrogen bonding</li>
+<li>van der Waals forces</li>
+<li>electrostatic interactions (potentially involving ions)</li>
+<li>hydrophobic interactions</li>
+<li>pi-pi stacking interactions</li>
+<li>cation-pi interactions</li>
+<li>water-mediated interactions</li>
+</ul>
+<p>Understanding these interactions is crucial for designing effective drugs. The more interactions a small molecule can form with a protein, the stronger the binding affinity will be. There are tools that can predict the non-covalent interactions between a protein and a small molecule from their 3D structures, such as <a href="https://plip-tool.biotec.tu-dresden.de/plip-web/plip/index">PLIP</a>.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Self-Study: Non-Covalent Interactions">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Self-Study: Non-Covalent Interactions
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Briefly read about the different types of non-covalent interactions and when they are formed</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Task: Visualizing 3D Structures">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Task: Visualizing 3D Structures
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Use the <a href="https://plip-tool.biotec.tu-dresden.de/plip-web/plip/index">PLIP</a> tool to analyze the non-covalent interactions between a protein and a small molecule of your choice. On the website, you can directly enter the PDB ID of a protein-ligand complex from the Protein Data Bank (e.g.&nbsp;1OXR, or 3O9I).</li>
+<li>You can download the PLIP results as a PyMOL session for each small molecule in the structure. You can then open the PyMOL session to visualize the non-covalent interactions between the protein and the small molecule.</li>
+<li>Note that the HIV-protease inhibitor in 3O9I forms a water bridge with a water molecule in the active site of the protease. This water-mediated interaction is important for the binding affinity of the inhibitor, stabilizing the interaction and lowering its overall energy.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary:</h2>
+<p>You have learned about the basic concepts of proteins, small molecules, and their interaction physics. You have also learned how to visualise the 3D structures of proteins and small molecules and how such structures are obtained. You have studied how to analyze the non-covalent interactions between a protein and a small molecule using the PLIP tool.</p>
+<div class="callout callout-style-default callout-important callout-titled" title="Self-check: 3D Structures">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Self-check: 3D Structures
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Why is the 3D structure of a protein important for drug design? Think about why it is important to know the 3D structure of a protein when designing drugs that target it. Why do models that predict the binding affinity of a small molecule to a protein usually rely on the 3D structure of the protein-ligand interaction? What speaks against using the protein sequence and the small molecule string representation (e.g., SMILES) as input for such models?</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled" title="Self-check: What makes a good small-molecule drug?">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Self-check: What makes a good small-molecule drug?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Your have read about the general properties of small molecules that make them good drug candidates and also about the non-covalent interactions that are important for protein-ligand binding. Summarise the properties of a good small-molecule drug that binds to a specific protein target with high affinity: Can you see a trade-off?</p>
+</div>
+</div>
+</div>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
