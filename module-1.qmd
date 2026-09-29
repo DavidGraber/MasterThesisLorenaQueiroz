@@ -2,4 +2,80 @@
 title: "Track Module 1"
 ---
 
-Content of Track Module 1.
+# Learning Objectives:
+
+1. Familiarise yourself with the basic concepts of proteins, small molecules, and their interaction physics.
+2. Learn how to visualise the 3D structures of proteins and small molecules and how such structures are obtained.
+3. Investigate how 3D structures of protein-ligand interactions are scored with scoring functions.
+
+# Part 1: Proteins, Small Molecules and their Interaction Physics
+
+To understand the principles of drug discovery, it is important to understand the basic concepts of proteins, small molecules, and their interaction physics. Proteins are large biomolecules that perform a wide range of functions in living organisms, including catalyzing biochemical reactions, providing structural support, and regulating cellular processes. Therefore, they are the main targets for drug development. Small molecules, on the other hand, are low molecular weight compounds that are small enough to penetrate cell membranes and interact with proteins to modulate their activity. Therefore, small molecules are the main type of drugs used in modern medicine. 
+
+::: {.callout-tip title="Self-Study: Proteins" collapse="true"}
+1. Review how protein are built from an **amino acid sequence**, how they fold into primary, secondary, tertiary and quaternary structures, and how their structure determines their function. 
+2. Read about how the 3D structures of proteins are determined experimentally (e.g., X-ray crystallography, NMR spectroscopy) or predicted computationally (e.g. 2021 Breakthrough Paper [AlphaFold2](https://www.nature.com/articles/s41586-021-03819-2)).
+:::
+
+::: {.callout-tip title="Self-Study: Small Molecules" collapse="true"}
+1. Review how drug-like small molecules are built from atoms, of which atoms they are composed and what functional groups they contain. Describe what makes a good drug-like small molecule (See [Lipinski's Rule of Five](https://en.wikipedia.org/wiki/Lipinski%27s_rule_of_five)).
+2. Understand how small molecules can interact with proteins through various mechanisms, such as binding to active sites or allosteric sites.
+3. Read about how small molecules can be represented in text format (e.g. Simplified Molecular-Input Line-Entry System [SMILES](https://en.wikipedia.org/wiki/Simplified_molecular-input_line-entry_system)).
+:::
+
+
+## How to visualise proteins, small molecules and their interactions:
+Structural bioinformaticians often use [PyMOL](https://pymol.org/2/) to visualise the 3D structures of proteins and small molecules. PyMOL is a powerful molecular visualization tool that allows users to manipulate and analyze molecular structures in three dimensions. It can be used to visualize protein-ligand interactions, identify binding sites, and generate publication-quality images of molecular structures.
+
+::: {.callout-note title="Task: Visualizing 3D Structures" collapse="true"}
+1. Apply for a free student license of PyMOL at <https://www.pymol.org/buy.html>
+2. Download and install PyMOL on your computer.
+3. Use PyMOL to visualise the 3D structure of a protein-ligand complex of your choice. You can obtain the 3D structure from the Protein Data Bank (PDB) by searching for a specific protein or ligand and downloading the corresponding PDB file. Once you have the PDB file, you can open it in PyMOL and explore the protein-ligand interactions.
+4. Alternatively, your can directly fetch the 3D structure of a protein-ligand complex from the PDB using the PDB ID (e.g., 1OXR) in PyMOL by running the command `fetch 1OXR` in the PyMOL command line.
+5. Familiarise yourself with the basic functions of the PyMOL interface, such as rotating, zooming, and changing the representation of the molecules.
+    - At the bottom right, you can toggle on the sequence viewer (S), which shows the amino acid sequence of the protein and allows you to select specific residues by clicking on them. It also shows the ligand(s) in the structure, as well as potential water molecules and ions.
+    - You can select different parts of the protein or ligand by clicking on them in the PyMOL interface, which creates a selection (sele).
+    - On the right side of the PyMOL interface, you can find the "Display" menu, which allows you show (S) or hide (H) different representations, such as hide the cartoon representation and instead show the stick representation. You can also toggle on the display of an approximated surface. 
+    - These operations can be performed across the entire structure (all), on a specific part of the structure (e.g. 1OXR) or on the current selection (sele).
+:::
+
+
+::: {.callout-important title="Self-check: HIV Protease" collapse="true"}
+Use PyMOL to visualise the 3D structure of a HIV protease-ligand complex (3O9I). Note that the protein is a homodimer, meaning it consists of two identical subunits. The ligand is a small molecule inhibitor that binds to the active site of the protease in between the two subunits. Use PyMOL to explore the protein-ligand interaction. Select the two protein chains in the sequence viewer and toggle on the surface view to see how the ligand fits into the active site.
+:::
+
+## Protein-Ligand Interaction Physics:
+Small molecule drugs generally work by binding to a specific protein target and modulating its activity. This binding is mediated by a combination of **non-covalent** interactions, meaning there are no covalent bonds formed between the protein and the small molecule. The interactions include:
+
+- hydrogen bonding
+- van der Waals forces
+- electrostatic interactions (potentially involving ions)
+- hydrophobic interactions
+- pi-pi stacking interactions
+- cation-pi interactions
+- water-mediated interactions
+
+Understanding these interactions is crucial for designing effective drugs. The more interactions a small molecule can form with a protein, the stronger the binding affinity will be. There are tools that can predict the non-covalent interactions between a protein and a small molecule from their 3D structures, such as [PLIP](https://plip-tool.biotec.tu-dresden.de/plip-web/plip/index).
+
+::: {.callout-tip title="Self-Study: Non-Covalent Interactions" collapse="true"}
+1. Briefly read about the different types of non-covalent interactions and when they are formed
+:::
+
+::: {.callout-note title="Task: Visualizing 3D Structures" collapse="true"}
+1. Use the [PLIP](https://plip-tool.biotec.tu-dresden.de/plip-web/plip/index) tool to analyze the non-covalent interactions between a protein and a small molecule of your choice. On the website, you can directly enter the PDB ID of a protein-ligand complex from the Protein Data Bank (e.g. 1OXR, or 3O9I).
+2. You can download the PLIP results as a PyMOL session for each small molecule in the structure. You can then open the PyMOL session to visualize the non-covalent interactions between the protein and the small molecule.
+3. Note that the HIV-protease inhibitor in 3O9I forms a water bridge with a water molecule in the active site of the protease. This water-mediated interaction is important for the binding affinity of the inhibitor, stabilizing the interaction and lowering its overall energy.
+:::
+
+## Summary:
+You have learned about the basic concepts of proteins, small molecules, and their interaction physics. You have also learned how to visualise the 3D structures of proteins and small molecules and how such structures are obtained. You have studied how to analyze the non-covalent interactions between a protein and a small molecule using the PLIP tool.
+
+::: {.callout-important title="Self-check: 3D Structures" collapse="true"}
+Why is the 3D structure of a protein important for drug design? Think about why it is important to know the 3D structure of a protein when designing drugs that target it. Why do models that predict the binding affinity of a small molecule to a protein usually rely on the 3D structure of the protein-ligand interaction? What speaks against using the protein sequence and the small molecule string representation (e.g., SMILES) as input for such models?
+:::
+
+::: {.callout-important title="Self-check: What makes a good small-molecule drug?" collapse="true"}
+Your have read about the general properties of small molecules that make them good drug candidates and also about the non-covalent interactions that are important for protein-ligand binding. Summarise the properties of a good small-molecule drug that binds to a specific protein target with high affinity: Can you see a trade-off?
+:::
+
+
