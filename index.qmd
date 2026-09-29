@@ -18,7 +18,7 @@ Proteins and ligands can be visualized in 3D using molecular visualization softw
 
 - Cartoon representation: Shows the protein's secondary structure (alpha helices, beta sheets, loops), which are common ways the amino acid chains fold within a protein. This representation highlights the protein's overall fold, providing a clear view of the protein's architecture.
 
-- Stick representation: Displays all atoms and bonds in the protein and ligand as sticks (hydrogens are usually not shown), allowing for a detailed view of the atomic bonds between the protein and ligand.
+- Stick representation: Displays all atoms and bonds in the protein and ligand as sticks (hydrogens are usually not shown), allowing for a detailed view of the atomic bonds (covalent).
 
 - Surface representation: Displays the protein's surface as a solid shape, which can be colored by properties such as electrostatic potential or hydrophobicity. This representation helps to visualize the shape and accessibility of the binding pocket, as well as how the ligand fits into it.
 
@@ -32,7 +32,7 @@ The efficacy of a drug is heavily dependent on its binding affinity: The strengt
 
 The primary goal of computational drug discovery / virtual screening in the small molecule domain is to rapidly and cost-effectively identify promising small molecules from libraries containing millions of candidates. Structure-based drug discovery explicitly leverages the known 3D geometry of the target protein. To evaluate a drug candidate, a computational docking tool is used to dock the ligand into the target pocket, aiming to find a favourable binding pose. Docking algorithms explore the conformational space of the ligand and the protein pocket, generating multiple possible binding poses.
 
-![A docking algorithm explores docking poses (conformations in which a ligand can bind to a given protein). The resulting 3D poses can then be scores by a scoring function.](images/docking.gif)
+![A docking algorithm explores docking poses (conformations in which a ligand can bind to a given protein). The resulting 3D poses can then be scored by a scoring function.](images/docking.gif)
 
 Not all of the binding poses that are generated for a ligand are realistic or even physically possible. For this reason, once these 3D protein-ligand complexes are generated, they are evaluated using a scoring function, a computational method that produces scores that reflect a binding energy (low energy is better, meaning the binding is more stable). These scoring functions should separate true binders from non-binders, and ideally rank the true binders poses by their binding affinity. The top ranked candidates can then be selected for experimental validation, which is the ultimate test of a drug candidate's efficacy.
 
@@ -47,8 +47,8 @@ Historically, virtual screening has relied on classical scoring functions. These
 
 
 ### **Summary of the Classical Computational Drug Screening Workflow**
-1. Obtain the 3D structure of the target protein (from the PDB).
-2. Use a docking tool to generate multiple binding poses for each ligand.
+1. Obtain the 3D structure of the target protein (from the PDB or with folding models such as AlphaFold).
+2. Use a docking tool to generate multiple binding poses for each ligand in your library.
 3. Score the generated poses using a scoring function (classical or ML-based).
 4. Select the top-ranked candidates for experimental validation.
 
