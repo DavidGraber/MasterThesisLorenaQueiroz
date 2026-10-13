@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -123,12 +158,23 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning Objectives:</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
   <li><a href="#part-1-proteins-small-molecules-and-their-interaction-physics" id="toc-part-1-proteins-small-molecules-and-their-interaction-physics" class="nav-link" data-scroll-target="#part-1-proteins-small-molecules-and-their-interaction-physics">Part 1: Proteins, Small Molecules and their Interaction Physics</a>
   <ul class="collapse">
-  <li><a href="#how-to-visualise-proteins-small-molecules-and-their-interactions" id="toc-how-to-visualise-proteins-small-molecules-and-their-interactions" class="nav-link" data-scroll-target="#how-to-visualise-proteins-small-molecules-and-their-interactions">How to visualise proteins, small molecules and their interactions:</a></li>
-  <li><a href="#protein-ligand-interaction-physics" id="toc-protein-ligand-interaction-physics" class="nav-link" data-scroll-target="#protein-ligand-interaction-physics">Protein-Ligand Interaction Physics:</a></li>
-  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary:</a></li>
+  <li><a href="#how-to-visualise-proteins-small-molecules-and-their-interactions" id="toc-how-to-visualise-proteins-small-molecules-and-their-interactions" class="nav-link" data-scroll-target="#how-to-visualise-proteins-small-molecules-and-their-interactions">How to visualise proteins, small molecules and their interactions</a></li>
+  <li><a href="#protein-ligand-interaction-physics" id="toc-protein-ligand-interaction-physics" class="nav-link" data-scroll-target="#protein-ligand-interaction-physics">Protein-Ligand Interaction Physics</a></li>
+  <li><a href="#summary-part-1" id="toc-summary-part-1" class="nav-link" data-scroll-target="#summary-part-1">Summary Part 1:</a></li>
+  </ul></li>
+  <li><a href="#part-2-docking-a-small-molecule-into-a-protein-binding-site" id="toc-part-2-docking-a-small-molecule-into-a-protein-binding-site" class="nav-link" data-scroll-target="#part-2-docking-a-small-molecule-into-a-protein-binding-site">Part 2: Docking a Small Molecule into a Protein Binding Site</a>
+  <ul class="collapse">
+  <li><a href="#docking-aspirin-into-phospholipase-a2" id="toc-docking-aspirin-into-phospholipase-a2" class="nav-link" data-scroll-target="#docking-aspirin-into-phospholipase-a2">Docking Aspirin into Phospholipase A2</a></li>
+  <li><a href="#step-1-create-a-dedicated-docking-environment" id="toc-step-1-create-a-dedicated-docking-environment" class="nav-link" data-scroll-target="#step-1-create-a-dedicated-docking-environment">Step 1: Create a dedicated docking environment</a></li>
+  <li><a href="#step-2-download-and-prepare-the-protein-receptor" id="toc-step-2-download-and-prepare-the-protein-receptor" class="nav-link" data-scroll-target="#step-2-download-and-prepare-the-protein-receptor">Step 2: Download and Prepare the Protein (Receptor)</a></li>
+  <li><a href="#step-3-download-and-prepare-the-small-molecule-ligand" id="toc-step-3-download-and-prepare-the-small-molecule-ligand" class="nav-link" data-scroll-target="#step-3-download-and-prepare-the-small-molecule-ligand">Step 3: Download and Prepare the Small Molecule (Ligand)</a></li>
+  <li><a href="#step-4-define-the-docking-box" id="toc-step-4-define-the-docking-box" class="nav-link" data-scroll-target="#step-4-define-the-docking-box">Step 4: Define the Docking Box</a></li>
+  <li><a href="#step-5-docking-aspirin-into-phospholipase-a2" id="toc-step-5-docking-aspirin-into-phospholipase-a2" class="nav-link" data-scroll-target="#step-5-docking-aspirin-into-phospholipase-a2">Step 5: Docking Aspirin into Phospholipase A2</a></li>
+  <li><a href="#step-6-visualize-the-docking-results" id="toc-step-6-visualize-the-docking-results" class="nav-link" data-scroll-target="#step-6-visualize-the-docking-results">Step 6: Visualize the Docking Results</a></li>
+  <li><a href="#summary-part-2" id="toc-summary-part-2" class="nav-link" data-scroll-target="#summary-part-2">Summary Part 2:</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -156,11 +202,12 @@ ul.task-list li input[type="checkbox"] {
 
 
 <section id="learning-objectives" class="level1">
-<h1>Learning Objectives:</h1>
+<h1>Learning Objectives</h1>
 <ol type="1">
 <li>Familiarise yourself with the basic concepts of proteins, small molecules, and their interaction physics.</li>
 <li>Learn how to visualise the 3D structures of proteins and small molecules and how such structures are obtained.</li>
-<li>Investigate how 3D structures of protein-ligand interactions are scored with scoring functions.</li>
+<li>Dock a small molecule into a protein binding site and score the interaction with AutoDock Vina.</li>
+<li>Critically evaluate the results of a docking experiment and understand the limitations of docking.</li>
 </ol>
 </section>
 <section id="part-1-proteins-small-molecules-and-their-interaction-physics" class="level1">
@@ -206,7 +253,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <section id="how-to-visualise-proteins-small-molecules-and-their-interactions" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-visualise-proteins-small-molecules-and-their-interactions">How to visualise proteins, small molecules and their interactions:</h2>
+<h2 class="anchored" data-anchor-id="how-to-visualise-proteins-small-molecules-and-their-interactions">How to visualise proteins, small molecules and their interactions</h2>
 <p>Structural bioinformaticians often use <a href="https://pymol.org/2/">PyMOL</a> to visualise the 3D structures of proteins and small molecules. PyMOL is a powerful molecular visualization tool that allows users to manipulate and analyze molecular structures in three dimensions. It can be used to visualize protein-ligand interactions, identify binding sites, and generate publication-quality images of molecular structures.</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Task: Visualizing 3D Structures">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
@@ -254,7 +301,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </section>
 <section id="protein-ligand-interaction-physics" class="level2">
-<h2 class="anchored" data-anchor-id="protein-ligand-interaction-physics">Protein-Ligand Interaction Physics:</h2>
+<h2 class="anchored" data-anchor-id="protein-ligand-interaction-physics">Protein-Ligand Interaction Physics</h2>
 <p>Small molecule drugs generally work by binding to a specific protein target and modulating its activity. This binding is mediated by a combination of <strong>non-covalent</strong> interactions, meaning there are no covalent bonds formed between the protein and the small molecule. The interactions include:</p>
 <ul>
 <li>hydrogen bonding</li>
@@ -305,8 +352,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </section>
-<section id="summary" class="level2">
-<h2 class="anchored" data-anchor-id="summary">Summary:</h2>
+<section id="summary-part-1" class="level2">
+<h2 class="anchored" data-anchor-id="summary-part-1">Summary Part 1:</h2>
 <p>You have learned about the basic concepts of proteins, small molecules, and their interaction physics. You have also learned how to visualise the 3D structures of proteins and small molecules and how such structures are obtained. You have studied how to analyze the non-covalent interactions between a protein and a small molecule using the PLIP tool.</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Self-check: 3D Structures">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
@@ -340,6 +387,138 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+</section>
+</section>
+<section id="part-2-docking-a-small-molecule-into-a-protein-binding-site" class="level1">
+<h1>Part 2: Docking a Small Molecule into a Protein Binding Site</h1>
+<p>Docking is a computational method that predicts the preferred orientation of a small molecule when it binds to a protein target structure. It takes a small molecule and a protein structure as input and generates a set of possible binding poses for the small molecule in the protein binding site. In this process the small molecule is treated as a flexible ligand that can adopt different conformations, while the protein is usually treated as a rigid receptor. The docking algorithm evaluates each pose based on a scoring function that estimates the binding energy (lower is better and more stable). The output of a docking experiment is a ranked list of poses, with the highest-scoring pose being the most likely binding mode.</p>
+<section id="docking-aspirin-into-phospholipase-a2" class="level2">
+<h2 class="anchored" data-anchor-id="docking-aspirin-into-phospholipase-a2">Docking Aspirin into Phospholipase A2</h2>
+<p>In this section, we will perform a docking experiment using AutoDock Vina to dock the small molecule drug Aspirin into the binding site of the protein Phospholipase A2. We will use the 3D structures of the protein and a 2D representation of the small molecule as input for the docking experiment. As we know the true binding site and conformation of Aspirin in Phospholipase A2, we can compare the docking results to the known binding mode and evaluate the accuracy of the docking experiment.</p>
+<p><strong>AutoDock Vina</strong> is a popular open-source docking software that docks small molecules to a protein binding site. It explores the conformational space of small molecules (flexible ligands) to find the most favorable binding poses within a protein binding site (rigid). It also uses a scoring function to predict the binding affinity of each pose.</p>
+</section>
+<section id="step-1-create-a-dedicated-docking-environment" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-create-a-dedicated-docking-environment">Step 1: Create a dedicated docking environment</h2>
+<p>In order to gather all the necessary tools for docking, we will create a dedicated conda environment. This will ensure that all dependencies are installed and that the tools do not interfere with other software on your system.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a dedicated environment</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">-n</span> docking_env python=3.10 <span class="at">-y</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate docking_env</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Install AutoDock Vina and OpenBabel via conda-forge</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install <span class="at">-c</span> conda-forge vina openbabel <span class="at">-y</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Install RDKit, SciPy and Gemmi via conda-forge</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install <span class="at">-c</span> conda-forge rdkit scipy gemmi <span class="at">-y</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Install Meeko for modern ligand preparation</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install meeko</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>OpenBabel</strong> is a chemical toolbox that can convert between different file formats and perform various chemical operations. <strong>RDKit</strong> is a cheminformatics library that provides tools for working with chemical structures and performing molecular modeling tasks. <strong>Meeko</strong> is a modern ligand preparation tool that can generate 3D conformations of small molecules and prepare them for docking. <strong>Gemmi</strong> is a library for working with crystallographic data, which can be useful for preparing protein structures for docking.</p>
+</section>
+<section id="step-2-download-and-prepare-the-protein-receptor" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-download-and-prepare-the-protein-receptor">Step 2: Download and Prepare the Protein (Receptor)</h2>
+<p>In this part, we will download the 3D structure of the protein Phospholipase A2 in complex with Aspirin from the Protein Data Bank (PDB) and prepare it for docking. We will extract only the protein from the complex and convert it to the PDBQT format, which is required by AutoDock Vina. The Protein Data Bank (PDB) is a public database of protein structures derived from crystallographic studies.</p>
+<ol type="1">
+<li><strong>Download the Protein:</strong>
+<ul>
+<li>Go to the RCSB Protein Data Bank and download the structure of the interaction of the phospholipase A2 with aspirin (<a href="https://www.rcsb.org/structure/1OXR">here</a>)</li>
+<li>Go to <em>Download Files</em> &gt; <em>Legacy PDB</em></li>
+<li>Save the file as <code>1OXR.pdb</code>. This file contains the 3D coordinates of the protein-ligand complex, including the protein, the ligand (Aspirin), water molecules, and ions.</li>
+</ul></li>
+<li><strong>Extract only the protein from the complex.</strong>
+<ul>
+<li>Open the complex in PyMOL</li>
+<li>Remove waters by clicking on the “A” button next to the “all” in the display menu and select “remove waters”</li>
+<li>Remove the ligand by selecting it, then click on the “A” button next to the “sele” in the display menu and select “remove atoms”</li>
+<li>Save the protein (<em>File</em> &gt; <em>Export Molecule</em> &gt; <em>Save</em>), select PDB as the file type and call the file <code>receptor.pdb</code>.</li>
+</ul></li>
+<li><strong>Convert the PDB into PDBQT for Docking:</strong>
+<ul>
+<li>Open a terminal at the location of the receptor.pdb file</li>
+<li>Run <code>obabel receptor.pdb -O receptor.pdbqt -xr -h</code> to convert the protein to PDBQT format for docking (make sure the docking_env is activated).</li>
+</ul></li>
+</ol>
+</section>
+<section id="step-3-download-and-prepare-the-small-molecule-ligand" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-download-and-prepare-the-small-molecule-ligand">Step 3: Download and Prepare the Small Molecule (Ligand)</h2>
+<p>In this part, we will download a 2D representation of the small molecule drug Aspirin from PubChem and prepare it for docking. We will convert the downloaded SDF file into the PDBQT format, which is required by AutoDock Vina. A 2D representation of the small molecule is sufficient for docking, as AutoDock Vina simulate the flexibility of the ligand and will generate 3D conformations of the ligand during the docking process.PubChem is a public database of chemical compounds and their properties.</p>
+<ol type="1">
+<li><strong>Download a simple 2D representation of Aspirin from PubChem</strong>
+<ul>
+<li>Find aspirin in the PubChem database (<a href="https://pubchem.ncbi.nlm.nih.gov/compound/2244">here</a>)</li>
+<li>Go <em>Download</em> &gt; <em>2D Structure</em> and save the SDF file as <code>aspirin.sdf</code> next to the <code>receptor.pdb</code> file.</li>
+</ul></li>
+<li><strong>Convert the SDF file into PDBQT format for docking:</strong>
+<ul>
+<li>Open a terminal at the location of the <code>aspirin.sdf</code> file and run the command <code>mk_prepare_ligand.py -i aspirin.sdf -o aspirin.pdbqt</code>. This will convert the SDF file into PDBQT format for docking (make sure the docking_env is activated).</li>
+</ul></li>
+</ol>
+</section>
+<section id="step-4-define-the-docking-box" class="level2">
+<h2 class="anchored" data-anchor-id="step-4-define-the-docking-box">Step 4: Define the Docking Box</h2>
+<p>Now that we have prepared the protein and the small molecule, we need to define the docking box. The docking box is a 3D region around the binding site of the protein where AutoDock Vina will search for possible binding poses of the small molecule. The docking box is defined by its center coordinates (x, y, z) and its size (width, height, depth). As we know the true binding site of Aspirin in Phospholipase A2, we can use PyMOL to find the center of the binding site and define the docking box around it. We can then see if AutoDock Vina can find the correct binding pose of Aspirin in the docking box.</p>
+<ul>
+<li>Open the original complex 1OXR in PyMOL and select the ligand by clicking on it</li>
+<li>In the PyMOL console below the sequence viewer, type <code>pseudoatom center, sel</code></li>
+<li>A small star will appear in the center of the ligand, called pseudoatom, which we will use as the center of our box</li>
+<li>Deselect the ligand and select the pseudoatom</li>
+<li>In the PyMOL console, type <code>xyz = cmd.get_coords('sel')</code> followed by <code>print(xyz)</code>. This will print the coordinates of the pseudoatom, which is the center of our box. Note down the rougn values of these coordinates, as you will need them to define the docking box in AutoDock Vina.</li>
+</ul>
+<p>For testing purposes we will use a docking box of size 20x20x20 Å, which is large enough to cover the binding site and allow for some flexibility in the docking process. The size of the docking box can be adjusted based on the size of the ligand and the binding site. You could even make it so large that it includes the entire protein, which would allow AutoDock Vina to search for binding poses anywhere on the protein surface. However, this would also increase the computational time and reduce the accuracy of the docking results, as AutoDock Vina would have to explore a much larger conformational space.</p>
+</section>
+<section id="step-5-docking-aspirin-into-phospholipase-a2" class="level2">
+<h2 class="anchored" data-anchor-id="step-5-docking-aspirin-into-phospholipase-a2">Step 5: Docking Aspirin into Phospholipase A2</h2>
+<p>Now that we have prepared the protein and the small molecule and defined the center of our docking box, we can run AutoDock Vina to dock the small molecule into the protein binding site. Open a terminal at the location of the prepared files and run the following command, replacing <code>&lt;X&gt;</code>, <code>&lt;Y&gt;</code>, and <code>&lt;Z&gt;</code> with the coordinates of the center of the docking box that you obtained from PyMOL:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">vina</span> <span class="at">--receptor</span> receptor.pdbqt <span class="at">--ligand</span> aspirin.pdbqt <span class="at">--center_x</span> <span class="op">&lt;</span>X<span class="op">&gt;</span> --center_y <span class="op">&lt;</span>Y<span class="op">&gt;</span> --center_z <span class="op">&lt;</span>Z<span class="op">&gt;</span> --size_x 20.0 <span class="at">--size_y</span> 20.0 <span class="at">--size_z</span> 20.0 <span class="at">--out</span> docking_results.pdbqt <span class="at">--exhaustiveness</span> 32</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>If successful, this prints a table with the docking results, including the binding affinity (in kcal/mol) and the RMSD values for each pose. The best pose is usually the one with the lowest binding affinity. The docking poses will be saved in the <code>docking_results.pdbqt</code> file. We will convert this file into SDF format for easier visualization in PyMOL. Run the following command to convert the docking results into SDF format:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">obabel</span> docking_results.pdbqt <span class="at">-O</span> docking_results.sdf</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="step-6-visualize-the-docking-results" class="level2">
+<h2 class="anchored" data-anchor-id="step-6-visualize-the-docking-results">Step 6: Visualize the Docking Results</h2>
+<p>Now that we have obtained the docking results, we can visualize them in PyMOL. Open the original complex 1OXR in PyMOL and load the docking results by drag-and-drop the <code>docking_results.sdf</code> file into the PyMOL window. You can then compare the docking poses with the true binding pose of Aspirin in Phospholipase A2. The docking_results.sdf file contains multiple poses of the small molecule. You can switch between them by clicking on the arrows and “play” symbol at the bottom right of the PyMOL window.</p>
+</section>
+<section id="summary-part-2" class="level2">
+<h2 class="anchored" data-anchor-id="summary-part-2">Summary Part 2:</h2>
+<p>You have learned how to dock a small molecule into a protein binding site using AutoDock Vina. You have prepared the protein and the small molecule for docking, defined the docking box, and run the docking experiment. You have also visualized the docking results in PyMOL and compared them with the true binding pose of the small molecule in the protein binding site.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Task: Experimenting with AutoDock Vina">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Task: Experimenting with AutoDock Vina
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>If your docking experiment was not able to find the correct binding pose of Aspirin in Phospholipase A2, you can try to adjust the docking parameters and run the docking experiment again. You can try to change the size of the docking box, the exhaustiveness of the search, or the number of binding poses to generate. You can also try to dock a different small molecule into the same protein binding site or a different protein-ligand complex. Here an overview of the most important parameters of AutoDock Vina:</p>
+<p>Parameters: - <code>--receptor</code>: The path to the prepared protein file in PDBQT format. - <code>--ligand</code>: The path to the prepared small molecule file in PDBQT format - <code>--center_x</code>, <code>--center_y</code>, <code>--center_z</code>: The coordinates of the center of the docking box - <code>--size_x</code>, <code>--size_y</code>, <code>--size_z</code>: The size of the docking box in Ångströms - <code>--out</code>: The path to the output file where the docking results will be saved in PDBQT format - <code>--exhaustiveness</code>: The number of independent runs that AutoDock Vina will perform to explore the conformational space of the ligand. A higher value increases the accuracy of the docking results but also increases the computational time. - <code>--num_modes</code>: The number of binding poses to generate. The default is 9.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled" title="Self-check Question:">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Self-check Question:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>You have experienced the precision of AutoDock Vina in docking a small-molecule drug into a protein binding site. Are you convinced that this tool is useful for drug discovery? Imagine you have a new protein target that is associated with cancer and you want to find a small molecule that can bind to it and inhibit its activity. You could download any small-molecule from PubChem or similar databases to build your own small molecule drug candidate library. Then you let AutoDock Vina dock the molecules in your library against the protein target and you select the one that has the best binding affinity (lowest energy). Do you think you will be able to pick the best small molecule from your library that binds to the protein target?</p>
+</div>
+</div>
+</div>
+<p>While AutoDock Vina is highly regarded for its redocking capability (finding the correct binding pose of a known ligand in a known protein binding site within the standard 2 Å RMSD threshold of allowed deviation), its precision heavily depends on the flexibility of the ligand and the nature of the binding pocket. In a real drug discovery campaign, Vina’s exceptional speed makes it a useful tool for primary virtual screening to rapidly filter out non-binders from huge libraries of drug candidates (for example those that don’t fit into the protein’s binding pocket). However, the following limitations should be kept in mind:</p>
+<ul>
+<li><p>The predicted poses should always be viewed as computational suggestions rather than definitive answers. This is perfectly illustrated by the fact that you can command Vina to output virtually any number of alternative binding modes simply by changing the <code>--num_modes</code> parameter.</p></li>
+<li><p>AutoDock Vina regards the protein as a rigid structure, which is not always the case in reality. Proteins are dynamic molecules that can undergo conformational changes upon ligand binding, which can affect the binding affinity and pose of the small molecule. In our example, we took the protein structure from a crystal structure of the protein-ligand complex, which is already in the correct conformation, ready to bind Aspirin. However, in many drug discovery projects, the protein is flexible and might change its conformation upon ligand binding. If the protein structure is obtained from a crystal structure of the apo form of the protein (without ligand), from a homology model (guessing the structure based on a similar known structure), or from AlphaFold (AI model to predict protein structures from amino acid sequences), the resulting structure does not reflect the true binding site conformation. In this case, AutoDock Vina cannot find the correct binding pose of the small molecule in the protein binding site, even if the small molecule is a good binder.</p></li>
+<li><p>The binding affinity predictions of AutoDock Vina are not always reliable. Because the scoring function is based on a simplified model of the protein-ligand interaction, it often does not accurately reflect the true binding affinity of the small molecule to the protein. Therefore, it is important to validate the docking results with experimental data or more accurate computational methods, such as molecular dynamics simulations or free energy calculations.</p></li>
+</ul>
+<p>Overall, AutoDock Vina is a useful tool, it’s apparent limitation limit its usability in real drug discovery. So there is still a great need for more accurate and reliable docking methods and more accurate binding affinity prediction models to accelerate small-molecule drug discovery.</p>
 
 
 </section>
