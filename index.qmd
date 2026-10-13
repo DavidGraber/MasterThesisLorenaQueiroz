@@ -12,7 +12,7 @@ The vast majority of approved therapeutics are small molecules designed to bind 
 
 To design small-molecule drugs binding to specific target proteins, researchers rely on accurate 3D structural data. The gold standard for obtaining these structures is X-ray crystallography, which captures proteins (and the interacting small molecules) in their true 3D state as found in the physiological environment. Resulting structures are publicly deposited in the Protein Data Bank (PDB, Example: https://www.rcsb.org/structure/1OXR). 
 
-### Visualizing Proteins, Ligands, and Their Interactions
+### Visualizing Proteins, Ligands, and their Interactions
 
 Proteins and ligands can be visualized in 3D using molecular visualization software (e.g. PyMOL). These tools allow researchers to explore the protein's surface, identify binding pockets, and observe how ligands interact with the protein at an atomic level. There are different ways to visualize these interactions, such as showing the protein in a cartoon representation, with all atoms shown in a stick representation or with an approximated surface. Atoms are generally colored by element (e.g. carbon in green, cyan or magenta, oxygen in red, nitrogen in blue, sulfur in yellow, and hydrogen in white).
 
@@ -22,7 +22,7 @@ Proteins and ligands can be visualized in 3D using molecular visualization softw
 
 - Surface representation: Displays the protein's surface as a solid shape, which can be colored by properties such as electrostatic potential or hydrophobicity. This representation helps to visualize the shape and accessibility of the binding pocket, as well as how the ligand fits into it.
 
-![Three representations of the same protein-ligand interaction: The small molecule drug Aspirin (in cyan) binding and blocking the activity of Cyclooxygenase, which would otherwise produce prostaglandins that cause inflammation, pain, and fever.](images/protein_representations.png)
+![Three representations of the same protein-ligand interaction: The small molecule drug Aspirin (in cyan) binding and blocking the activity of Phospholipase A2, which leads to lower production of prostaglandins (which cause inflammation, pain, and fever).](images/protein_representations.png)
 
 ### Protein-Ligand Interactions
 
